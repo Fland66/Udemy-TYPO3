@@ -15,14 +15,16 @@
 				<div class="row">
 					<div class="col-md-8">
 						<!-- First Content -->
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 					</div>
 					<div class="col-md-4">
 						<!-- Second Content -->
+						<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '1'}" />
 					</div>
 				</div>				
 			</div>
 		</main>
 		<!-- Footer -->
-		<f:render partial="Footer/Default" />
+		<f:render partial="Footer/Default" section="Default" />
 	</f:section>
 </html>
