@@ -4,12 +4,12 @@
 	
 	<f:section name="Default">
 		<!-- Header -->
-		<f:render partial="Header/Default" />
+		<f:render partial="Header/Default" arguments="{mainNavigation: mainNavigation}" />
 		
 		<main role="main" class="inner cover">
 			<f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 		</main>
 		<!-- Footer -->
-		<f:render partial="Footer/Default" section="Home"/>
+		<f:render partial="Footer/Default" section="Home" />
 	</f:section>
 </html>

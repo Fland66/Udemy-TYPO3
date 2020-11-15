@@ -4,12 +4,12 @@
 	
 	<f:section name="Default">
 		<!-- Header -->
-		<f:render partial="Header/Default" />
+		<f:render partial="Header/Default" arguments="{mainNavigation: mainNavigation}" />
 		
 		<main role="main" class="inner cover row">
 			<div class="col-2">
 				<!-- Submenu -->
-				<f:render partial="Navigation/Submenu" />
+				<f:render partial="Navigation/Submenu" arguments="{subNavigation: subNavigation}" />
 			</div>
 			<div class="col-10">
 				<div class="row">

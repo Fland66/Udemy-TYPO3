@@ -305,8 +305,24 @@ page {
 			layoutHeaderStyle = Default
 			layoutFooterStyle = Default
 		}
-		
-		
+
+        #################################
+        ## PROCESSORS
+        #################################
+        dataProcessing {
+        	10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        	10 {
+        		levels = 1
+        		as = mainNavigation
+        	}
+        	
+        	20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        	20 {
+        		entryLevel = 1
+        		levels = 3
+        		as = subNavigation
+        	}
+        }
 	}
 }
 ############################################################
