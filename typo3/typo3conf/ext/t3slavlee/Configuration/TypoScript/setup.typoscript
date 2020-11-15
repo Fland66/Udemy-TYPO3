@@ -1,0 +1,314 @@
+
+plugin.tx_t3slavlee_grid {
+    view {
+        templateRootPaths.0 = EXT:t3slavlee/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_t3slavlee_grid.view.templateRootPath}
+        partialRootPaths.0 = EXT:t3slavlee/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_t3slavlee_grid.view.partialRootPath}
+        layoutRootPaths.0 = EXT:t3slavlee/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_t3slavlee_grid.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_t3slavlee_grid.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+plugin.tx_t3slavlee_accordion {
+    view {
+        templateRootPaths.0 = EXT:t3slavlee/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_t3slavlee_accordion.view.templateRootPath}
+        partialRootPaths.0 = EXT:t3slavlee/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_t3slavlee_accordion.view.partialRootPath}
+        layoutRootPaths.0 = EXT:t3slavlee/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_t3slavlee_accordion.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_t3slavlee_accordion.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+plugin.tx_t3slavlee_tabs {
+    view {
+        templateRootPaths.0 = EXT:t3slavlee/Resources/Private/Templates/
+        templateRootPaths.1 = {$plugin.tx_t3slavlee_tabs.view.templateRootPath}
+        partialRootPaths.0 = EXT:t3slavlee/Resources/Private/Partials/
+        partialRootPaths.1 = {$plugin.tx_t3slavlee_tabs.view.partialRootPath}
+        layoutRootPaths.0 = EXT:t3slavlee/Resources/Private/Layouts/
+        layoutRootPaths.1 = {$plugin.tx_t3slavlee_tabs.view.layoutRootPath}
+    }
+    persistence {
+        storagePid = {$plugin.tx_t3slavlee_tabs.persistence.storagePid}
+        #recursive = 1
+    }
+    features {
+        #skipDefaultArguments = 1
+        # if set to 1, the enable fields are ignored in BE context
+        ignoreAllEnableFieldsInBe = 0
+        # Should be on by default, but can be disabled if all action in the plugin are uncached
+        requireCHashArgumentForActionArguments = 1
+    }
+    mvc {
+        #callDefaultActionIfActionCantBeResolved = 1
+    }
+}
+
+# these classes are only used in auto-generated templates
+plugin.tx_t3slavlee._CSS_DEFAULT_STYLE (
+    textarea.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    input.f3-form-error {
+        background-color:#FF9F9F;
+        border: 1px #FF0000 solid;
+    }
+
+    .tx-t3slavlee table {
+        border-collapse:separate;
+        border-spacing:10px;
+    }
+
+    .tx-t3slavlee table th {
+        font-weight:bold;
+    }
+
+    .tx-t3slavlee table td {
+        vertical-align:top;
+    }
+
+    .typo3-messages .message-error {
+        color:red;
+    }
+
+    .typo3-messages .message-ok {
+        color:green;
+    }
+)
+
+############################################################
+# PAGE - START
+############################################################
+page = PAGE
+page {
+	typeNum = 0
+	
+	#################################
+    ## RESOURCES
+    #################################
+	includeCSSLibs {
+		bootstrap = EXT:t3slavlee/Resources/Public/Bootstrap/css/bootstrap.min.css
+	}
+	
+	includeCSS {
+		t3slavlee = EXT:t3slavlee/Resources/Public/Css/default.css
+		t3slavlee.media = screen
+	}
+	
+	includeJSFooterlibs {
+		jquery = EXT:t3slavlee/Resources/Public/jQuery/js/jquery-3.3.1.slim.min.js
+		popper = EXT:t3slavlee/Resources/Public/Popper/js/popper.min.js
+		bootstrap = EXT:t3slavlee/Resources/Public/Bootstrap/js/bootstrap.min.js	
+	}
+	
+	#Config
+	config {
+		baseURL = http://t3slavlee-2.slavlee.local/
+		doctype = html5
+		
+		#####################################
+		# DEBUG - START
+		#####################################
+		debug = 1
+		contentObjectExceptionHandler = 0
+		#####################################
+		# DEBUG - END
+		#####################################
+		
+		#####################################
+		# COMPRESSION - START
+		#####################################
+		compressCSS = 0
+		compressJS = 0
+		concatenateCss = 0
+		concatenateJs = 0
+		#####################################
+		# COMPRESSION - END
+		#####################################
+		
+		#####################################
+		# PAGETITLE - START
+		#####################################
+		pageTitleFirst = 1
+		pageTitleSeparator = -
+		pageTitleSeparator.noTrimWrap = | | |
+		#####################################
+		# PAGETITLE - END
+		#####################################
+		
+		#####################################
+		# INDEXING / SEARCH - START
+		#####################################
+		index_enable = 1
+		index_externals = 1
+		index_metatags = 1
+		#####################################
+		# INDEXING / SEARCH - END
+		#####################################
+		
+		#####################################
+		# CACHE - START
+		#####################################
+		sendCacheHeaders = 0
+		#####################################
+		# CACHE - END
+		#####################################
+		
+		#####################################
+		# LANGUAGE - START
+		#####################################
+		sys_language_uid = 0
+		sys_language_overlay = hideNonTranslated
+		sys_language_mode = strict
+		language = de
+		locale_all = de-DE
+		htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE"		
+		#####################################
+		# LANGUAGE - END
+		#####################################
+	}
+	
+	#Meta
+	meta {
+		viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+		
+		#Google
+		robots = noindex,nofollow
+		google = notranslate
+		
+		#SEO
+		description {
+			field = description
+		}
+		
+		author {
+			field = author
+		}
+		
+		keywords {
+			field = keywords
+		}
+		
+		copyright = Kevin Chileong Lee
+		
+		#OpenGraph
+		og:title {
+			attribute = property
+			field = title
+		}
+		og:site_name = Responsive TYPO3 Template
+	   	og:site_name.attribute = property
+	    dc.description {
+	    	field = description
+	    }	   
+	    og:description {
+	    	field = description
+	    }
+	    og:description.attribute = property
+	    og:locale = de_DE
+	    og:locale.attribute = property
+	    og:locale:alternate {
+    		attribute = property
+        	value {
+            	1 = de_DE
+            	2 = en_GB
+        	}
+      	}
+      	og:image {
+      		attribute = property
+      		stdWrap.cObject = FILES
+      		stdWrap.cObject {
+      			references {
+      				data = levelfield:-1, media, slide
+      			}      		
+	      		maxItems = 1
+	      		renderObj = IMG_RESOURCE
+	      		renderObj {
+	      			file {
+	      				import.data = file:current:uid
+	      				treatIdAsReference = 1
+	      				width = 1280c
+	      				height = 720c
+	      			}    
+	      			stdWrap {
+	      				typolink {
+	      					parameter.data = TSFE:lastImgResourceInfo|3
+	      					returnLast = url
+	      					forceAbsoluteUrl = 1
+	      				}
+	      			}  			
+	      		}
+      		}
+      	}
+      	
+      	X-UA-Compatible = IE=edge
+	}
+	
+	#################################
+    ## Fluid Template
+    #################################
+	10 = FLUIDTEMPLATE
+	10 {
+		templateName = Default
+		
+		#################################
+        ## Template Paths
+        #################################
+		layoutRootPaths {
+		    10 = EXT:t3slavlee/Resources/Private/Layouts
+		}
+		
+		partialRootPaths {
+		    10 = EXT:t3slavlee/Resources/Private/Partials
+		}
+		
+		templateRootPaths {
+			10 = EXT:t3slavlee/Resources/Private/Templates
+		}
+		
+		#################################
+        ## SETTINGS
+        #################################
+		settings {
+			layoutHeaderStyle = Default
+			layoutFooterStyle = Default
+		}
+		
+		
+	}
+}
+############################################################
+# PAGE - END
+############################################################

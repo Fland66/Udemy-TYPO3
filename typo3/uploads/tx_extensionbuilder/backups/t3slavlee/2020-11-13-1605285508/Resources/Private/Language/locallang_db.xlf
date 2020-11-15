@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2020-11-13T17:38:28Z" product-name="t3slavlee">
+		<header/>
+		<body>
+			<trans-unit id="tx_t3slavlee_domain_model_bxslider">
+				<source>Bx Slider</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_domain_model_bxslider.bx_enable">
+				<source>Bx Enable</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_domain_model_bxslider.bx_image_count">
+				<source>Bx Image Count</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_domain_model_bxslider.bx_display_time">
+				<source>Bx Display Time</source>
+			</trans-unit>
+			<trans-unit id="tt_content.tx_extbase_type.Tx_T3slavlee_BxSlider">
+				<source>TYPO3 Responsive Template BxSlider</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_grid.name">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_grid.description">
+				<source>Grid Element</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_accordion.name">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_accordion.description">
+				<source>Accordion Element</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_tabs.name">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="tx_t3slavlee_tabs.description">
+				<source>Tabs Element</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

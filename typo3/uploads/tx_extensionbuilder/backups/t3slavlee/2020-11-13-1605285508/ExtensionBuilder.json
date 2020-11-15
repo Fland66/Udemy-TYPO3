@@ -1,0 +1,144 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    181,
+                    78
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "BxSlider",
+                "objectsettings": {
+                    "addDeletedField": false,
+                    "addHiddenField": false,
+                    "addStarttimeEndtimeFields": false,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "tt_content",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "598845779928"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "bxEnable",
+                            "propertyType": "Boolean",
+                            "uid": "681728160465"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": false,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "bxImageCount",
+                            "propertyType": "Integer",
+                            "uid": "271436186600"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "Time in milliseconds",
+                            "propertyIsExcludeField": false,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "bxDisplayTime",
+                            "propertyType": "Integer",
+                            "uid": "1389335726855"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Responsive Template for TYPO3",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "t3slavlee",
+        "name": "TYPO3 Responsive Template",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "Fland",
+                "email": "webmanager@gmx.de",
+                "name": "Andreas Flindt",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Grid => index",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "description": "Grid Element",
+                "key": "grid",
+                "name": "Grid"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Accordion => show",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "description": "Accordion Element",
+                "key": "accordion",
+                "name": "Accordion"
+            },
+            {
+                "actions": {
+                    "controllerActionCombinations": "Tabs => show",
+                    "noncacheableActions": "",
+                    "switchableActions": ""
+                },
+                "description": "Tabs Element",
+                "key": "tabs",
+                "name": "Tabs"
+            }
+        ],
+        "vendorName": "Slavlee"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2020-11-13 05:38",
+        "extension_builder_version": "9.10.2",
+        "be_user": " (4)"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "slavlee/t3slavlee",
+    "type": "typo3-cms-extension",
+    "description": "Responsive Template for TYPO3",
+    "authors": [
+        {
+            "name": "Kevin Chileong Lee",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slavlee\\T3slavlee\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Slavlee\\T3slavlee\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "slavlee/t3slavlee": "self.version",
+        "typo3-ter/t3slavlee": "self.version"
+    }
+}
