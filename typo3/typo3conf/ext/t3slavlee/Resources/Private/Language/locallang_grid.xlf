@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-01-28T16:49:27Z" product-name="t3slavlee">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general.col1">
+				<source>1.Column</source>
+			</trans-unit>			
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general.col2">
+				<source>2.Column</source>
+			</trans-unit>			
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general.col3">
+				<source>3.Column</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general.col4">
+				<source>4.Column</source>
+			</trans-unit>			
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general.col_count">
+				<source>Amount of columns</source>
+			</trans-unit>
+			
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_options">
+				<source>Settings</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_options.col1_css">
+				<source>1.Column CSS</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_options.col2_css">
+				<source>2.Column CSS</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_options.col3_css">
+				<source>3.Column CSS</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_options.col4_css">
+				<source>4.Column CSS</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,20 @@
+TCEFORM {
+	tt_content {
+		frame_class {
+			addItems {
+				border = Border
+			}
+		}
+		
+		layout {
+			removeItems = 2,3
+			altLabels {
+				1 = Udemy
+			}
+			
+			addItems {
+				10 = Christmas 
+			}
+		}
+	}
+}

@@ -1,0 +1,10 @@
+<html 
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+	xmlns:lee="http://typo3.org/ns/Slavlee/T3slavlee/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+	<div class="{colClass}">
+		<f:for each="{col}" as="contentUid">
+			<lee:render.record uid="{contentUid}" />
+		</f:for>
+	</div>
+</html>

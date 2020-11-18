@@ -80,23 +80,32 @@ call_user_func(
         );
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
 		
-			$iconRegistry->registerIcon(
-				't3slavlee-plugin-grid',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:t3slavlee/Resources/Public/Icons/user_plugin_grid.svg']
-			);
+		$iconRegistry->registerIcon(
+			't3slavlee-plugin-grid',
+			\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+			['source' => 'EXT:t3slavlee/Resources/Public/Icons/user_plugin_grid.svg']
+		);
+	
+		$iconRegistry->registerIcon(
+			't3slavlee-plugin-accordion',
+			\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+			['source' => 'EXT:t3slavlee/Resources/Public/Icons/user_plugin_accordion.svg']
+		);
+	
+		$iconRegistry->registerIcon(
+			't3slavlee-plugin-tabs',
+			\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+			['source' => 'EXT:t3slavlee/Resources/Public/Icons/user_plugin_tabs.svg']
+		);
+	
+		/*
+		 * TCEFORM
+		 */
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:t3slavlee/Configuration/PageTS/TCEFORM.txt">');
 		
-			$iconRegistry->registerIcon(
-				't3slavlee-plugin-accordion',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:t3slavlee/Resources/Public/Icons/user_plugin_accordion.svg']
-			);
-		
-			$iconRegistry->registerIcon(
-				't3slavlee-plugin-tabs',
-				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-				['source' => 'EXT:t3slavlee/Resources/Public/Icons/user_plugin_tabs.svg']
-			);
-		
+		/*
+		 * Hooks
+		 */
+		$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['t3slavlee'] = \Slavlee\T3slavlee\Hooks\PageLayoutViewDrawItemHook::class;
     }
 );

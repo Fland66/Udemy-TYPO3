@@ -1,0 +1,17 @@
+<html 
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+	xmlns:lee="http://typo3.org/ns/Slavlee/T3slavlee/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+	<div class="card-header" id="cardHeading{ttContentUid}{key}">
+		<h3 class="mb-0">
+			<button class="btn btn-link" data-toggle="collapse" data-target="#collapse{ttContentUid}{key}" aria-expanded="{f:if(condition:\'{active}\', then: \'true\', else: \'false\')}" aria-controls="collapse{ttContentUid}{key}">
+				<lee:render.record.property uid="{item}" property="header" />
+			</button>
+		</h3>
+	</div>
+	<div id="collapse{ttContentUid}{key}" class="collapse{f:if(condition:'{active}', then: ' show')}" aria-labellbdy="cardHeading{ttContentUid}{key}" data-parent="#{parent}">
+		<div class="card-body">
+			<lee:render.record uid="{item}" />
+		</div>
+	</div>
+</html>

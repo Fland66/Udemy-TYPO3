@@ -1,0 +1,16 @@
+<html 
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:lee="http://typo3.org/ns/Slavlee/T3slavlee/ViewHelpers"
+	data-namespace-typo3-fluid="true">	
+	<f:if condition="{col -> f:count()} > 0">
+		<div class="{colClass}" data-colpos="{colPos}">
+			<f:for each="{col}" as="contentUid">
+				<div class="t3-page-ce-dropzone-available t3slavleejs-page-ce-dropzone-available ui-droppable"></div>
+				<div class="t3-page-ce t3slavleejs-page-ce ui-draggable" data-table="tt_content" data-uid="{contentUid}">
+					<lee:render.preview.record uid="{contentUid}" pageLayoutView="{pageLayoutView}" />
+				</div>
+				<div class="t3-page-ce-dropzone-available t3slavleejs-page-ce-dropzone-available ui-droppable"></div>
+			</f:for>
+		</div>
+	</f:if>
+</html>

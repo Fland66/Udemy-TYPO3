@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:t3slavlee/Resources/Private/Language/locallang_tabs.xlf:tt_content.pi_flexform.columns.sheet_general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.items>
+						<TCEforms>
+							<label>LLL:EXT:t3slavlee/Resources/Private/Language/locallang_tabs.xlf:tt_content.pi_flexform.columns.sheet_general.items</label>
+							<config>
+								<type>inline</type>
+								<foreign_table>tt_content</foreign_table>																
+							</config>
+						</TCEforms>
+					</settings.items>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

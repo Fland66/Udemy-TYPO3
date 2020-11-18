@@ -1,0 +1,7 @@
+<html	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+		xmlns:lee="http://typo3.org/ns/Slavlee/T3slavlee/ViewHelpers"
+		data-namespace-typo3-fluid="true">	
+	<a class="nav-item nav-link{f:if(condition:'{active}', then: ' active')}" id="nav-tab{ttContentUid}{key}" data-toggle="tab" href="#nav-{ttContentUid}{key}" role="tab" aria-controls="nav-{ttContentUid}{key}" aria-selected="{f:if(condition:'{active}', then: 'true', else: 'false')}">
+		<lee:render.record.property uid="{item}" property="header" />
+	</a>
+</html>

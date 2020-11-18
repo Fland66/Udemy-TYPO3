@@ -1,0 +1,21 @@
+<html	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+		data-namespace-typo3-fluid="true">	
+		<f:layout name="Content/Grid/Default" />	
+		
+		<f:section name="Main">
+			<div class="row">
+				<f:if condition="{col1}">
+					<f:render partial="Content/Grid/Column" arguments="{col: col1, colClass: settings.col1Css}" />
+				</f:if>
+				<f:if condition="{col2}">
+					<f:render partial="Content/Grid/Column" arguments="{col: col2, colClass: settings.col2Css}" />
+				</f:if>
+				<f:if condition="{col3}">
+					<f:render partial="Content/Grid/Column" arguments="{col: col3, colClass: settings.col3Css}" />
+				</f:if>
+				<f:if condition="{col3}">
+					<f:render partial="Content/Grid/Column" arguments="{col: col4, colClass: settings.col4Css}" />
+				</f:if>
+			</div>	
+		</f:section>		
+</html>

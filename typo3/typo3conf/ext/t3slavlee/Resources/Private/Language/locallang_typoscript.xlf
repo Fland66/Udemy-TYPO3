@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:t3slavlee/Resources/Private/Language/locallang" date="2020-02-04T20:28:41Z" product-name="t3slavlee">
+		<header/>
+		<body>
+			<trans-unit id="cat_folder">
+				<source>Folders</source>
+			</trans-unit>
+			<trans-unit id="cat_fluidtemplate">
+				<source>T3Slavlee: Template</source>
+			</trans-unit>
+			<trans-unit id="cat_config">
+				<source>Config</source>
+			</trans-unit>
+			<trans-unit id="cat_debug">
+				<source>Debug</source>
+			</trans-unit>
+			<trans-unit id="cat_compressing">
+				<source>Compressing</source>
+			</trans-unit>
+			<trans-unit id="cat_pagetitle">
+				<source>Pagetitle</source>
+			</trans-unit>
+			<trans-unit id="cat_cache">
+				<source>Cache</source>
+			</trans-unit>
+			<trans-unit id="cat_language">
+				<source>Language</source>
+			</trans-unit>
+			<trans-unit id="cat_meta">
+				<source>Meta</source>
+			</trans-unit>
+			<trans-unit id="cat_indexing">
+				<source>Indexing</source>
+			</trans-unit>
+			<trans-unit id="cat_layout">
+				<source>Layout</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

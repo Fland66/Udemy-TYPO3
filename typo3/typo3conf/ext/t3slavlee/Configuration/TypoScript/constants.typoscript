@@ -1,3 +1,156 @@
+#################################
+## CONSTANTS CATEGORIES
+#################################
+# customsubcategory=folder=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_folder
+# customsubcategory=config=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_config
+# customsubcategory=debug=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_debug
+# customsubcategory=compressing=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_compressing
+# customsubcategory=pagetitle=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_pagetitle
+# customsubcategory=cache=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_cache
+# customsubcategory=language=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_language
+# customsubcategory=indexing=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_indexing
+# customsubcategory=layout=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_layout
+# customsubcategory=fluidtemplate=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_fluidtemplate
+# customsubcategory=meta=LLL:EXT:t3slavlee/Resources/Private/Language/locallang_typoscript.xlf:cat_meta
+
+plugin.tx_t3slavlee {
+	page {
+		#################################
+	    ## CONFIG
+	    #################################
+	    config {
+		    # cat=fluidtemplate/config; type=string; label=Base URL
+			baseURL = http://t3slavlee-2.slavlee.local/
+			
+			# cat=fluidtemplate/config; type=string; label=Doctype
+			doctype = html5
+		}
+		#################################
+	    ## DEBUG
+	    #################################
+	    debug {
+		    # cat=fluidtemplate/debug; type=boolean; label=Debug
+		    debug = 1
+		    
+		    # cat=fluidtemplate/debug; type=boolean; label=Content Object Exception Handler
+			contentObjectExceptionHandler = 0
+		}
+		
+		#################################
+	    ## COMPRESSING
+	    #################################
+	    compressing {
+	    	# cat=fluidtemplate/compressing; type=boolean; label=Compress CSS
+		    compressCSS = 0
+		    
+		    # cat=fluidtemplate/compressing; type=boolean; label=Compress JS
+			compressJS = 0
+			
+			# cat=fluidtemplate/compressing; type=boolean; label=Concatenate CSS
+			concatenateCss = 0
+			
+			# cat=fluidtemplate/compressing; type=boolean; label=Concatenate JS
+			concatenateJs = 0
+		}
+		
+		#################################
+	    ## PAGE TITLE
+	    #################################
+	    pagetitle {
+		    # cat=fluidtemplate/pagetitle; type=boolean; label=Page title first
+		    pageTitleFirst = 1
+		    
+		    # cat=fluidtemplate/pagetitle; type=string; label=Page title separator
+			pageTitleSeparator = -
+			
+			# cat=fluidtemplate/pagetitle; type=string; label=Page title separator trim
+			pageTitleSeparator.noTrimWrap = | | |
+		}
+		
+		#####################################
+		# INDEXING / SEARCH
+		#####################################
+		indexing {
+			# cat=fluidtemplate/indexing; type=boolean; label=Index enable
+			index_enable = 1
+			
+			# cat=fluidtemplate/indexing; type=boolean; label=Index externals
+			index_externals = 1
+			
+			# cat=fluidtemplate/indexing; type=boolean; label=Index metatags
+			index_metatags = 1
+		}
+		
+		#####################################
+		# CACHE
+		#####################################
+		cache {
+			# cat=fluidtemplate/cache; type=boolean; label=Send cache headers
+			sendCacheHeaders = 0
+		}
+		
+		#####################################
+		# LANGUAGE
+		#####################################
+		language {
+			# cat=fluidtemplate/language; type=int+; label=Sys language uid
+			sys_language_uid = 0
+			
+			# cat=fluidtemplate/language; type=string; label=Sys language overlay
+			sys_language_overlay = hideNonTranslated
+			
+			# cat=fluidtemplate/language; type=string; label=Sys language mode
+			sys_language_mode = strict
+			
+			# cat=fluidtemplate/language; type=string; label=Language
+			language = de
+			
+			# cat=fluidtemplate/language; type=string; label=Locale all
+			locale_all = de-DE
+			
+			# cat=fluidtemplate/language; type=string; label=HTML setParams
+			htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE"
+		}
+		
+		#####################################
+		# META
+		#####################################
+		meta {
+			# cat=fluidtemplate/meta; type=string; label=Viewport
+			viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+		
+			# cat=fluidtemplate/meta; type=string; label=Robots
+			robots = noindex,nofollow
+			
+			# cat=fluidtemplate/meta; type=options[,notranslate,nositelinkssearchbox]; label=Google
+			google = notranslate
+			
+			# cat=fluidtemplate/meta; type=string; label=Copyright
+			copyright = Kevin Chileong Lee
+			
+			# cat=fluidtemplate/meta; type=string; label=X-UA-Compatible
+			X-UA-Compatible = IE=edge
+		}
+		
+		#####################################
+		# LAYOUT
+		#####################################
+		layout {
+			# cat=fluidtemplate/layout; type=options[Default,Home]; label=Template Name
+			templateName = Default
+			
+			header {
+				# cat=fluidtemplate/layout; type=options[Default,Pricing]; label=Header Style
+				style=Default	
+			}
+			
+			footer {
+				# cat=fluidtemplate/layout; type=options[Default,Pricing]; label=Footer Style
+				style=Default
+			}
+		}
+	}
+}
 
 plugin.tx_t3slavlee_grid {
     view {
@@ -9,7 +162,7 @@ plugin.tx_t3slavlee_grid {
         layoutRootPath = EXT:t3slavlee/Resources/Private/Layouts/
     }
     persistence {
-        # cat=plugin.tx_t3slavlee_grid//a; type=string; label=Default storage PID
+        # cat=plugin.tx_t3slavlee_grid/folder; type=string; label=Default storage PID
         storagePid =
     }
 }
@@ -43,3 +196,11 @@ plugin.tx_t3slavlee_tabs {
         storagePid =
     }
 }
+
+###################################################
+# FLUID STYLED CONTENT - START
+###################################################
+styles.templates.partialRootPath = EXT:t3slavlee/Resources/Private/Partials/Content/FluidStyledContent/
+###################################################
+# FLUID STYLED CONTENT - END
+###################################################

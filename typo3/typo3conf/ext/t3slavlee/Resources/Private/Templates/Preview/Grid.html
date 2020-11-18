@@ -1,0 +1,18 @@
+<html 
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+	data-namespace-typo3-fluid="true">
+	<div class="row t3slavlee-dropzone-container">
+		<f:if condition="{settings.col1}">
+			<f:render partial="Preview/Grid/Column" arguments="{col: col1, colClass: settings.col1Css, pageLayoutView: pageLayoutView, colPos: 1}" />
+		</f:if>
+		<f:if condition="{settings.col2}">
+			<f:render partial="Preview/Grid/Column" arguments="{col: col2, colClass: settings.col2Css, pageLayoutView: pageLayoutView, colPos: 2}" />
+		</f:if>
+		<f:if condition="{settings.col3}">
+			<f:render partial="Preview/Grid/Column" arguments="{col: col3, colClass: settings.col3Css, pageLayoutView: pageLayoutView, colPos: 3}" />
+		</f:if>
+		<f:if condition="{settings.col4}">
+			<f:render partial="Preview/Grid/Column" arguments="{col: col4, colClass: settings.col4Css, pageLayoutView: pageLayoutView, colPos: 4}" />
+		</f:if>
+	</div>
+</html>

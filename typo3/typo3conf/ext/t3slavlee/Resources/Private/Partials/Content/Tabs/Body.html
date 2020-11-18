@@ -1,0 +1,7 @@
+<html	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+		xmlns:lee="http://typo3.org/ns/Slavlee/T3slavlee/ViewHelpers"
+		data-namespace-typo3-fluid="true">
+		<div class="tab-pane fade{f:if(condition:'{active}', then: ' active show')}" id="nav-{ttContentUid}{key}" role="tabpanel" aria-labelledby="nav-{ttContentUid}{key}-tab">
+	        <lee:render.record uid="{item}" />
+	    </div>
+</html>

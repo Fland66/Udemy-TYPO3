@@ -1,0 +1,21 @@
+<html 
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" 
+	xmlns:lee="http://typo3.org/ns/Slavlee/T3slavlee/ViewHelpers"
+	data-namespace-typo3-fluid="true">
+	<div class="t3-page-ce-dropzone-available t3slavleejs-page-ce-dropzone-available ui-droppable"></div>
+	<div class="t3-page-ce t3slavleejs-page-ce ui-draggable" data-table="tt_content" data-uid="{item}">
+		<div class="panel-heading" id="cardHeading{ttContentUid}{key}">
+			<h3 class="panel-title">
+				<a role="button" data-toggle="collapse" data-parent="#accordion{ttContentUid}" href="#collapse{ttContentUid}{key}" aria-expanded="{f:if(condition:'{active}', then:'true', else: 'false')}" aria-controls="collapse{ttContentUid}{key}">
+					<lee:render.record.property property="header" uid="{item}" />
+				</a>
+			</h3>
+		</div>
+		<div id="collapse{ttContentUid}{key}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="cardHeading" data-parent="#accordion{ttContentUid}">
+			<div class="panel-body">
+				<lee:render.preview.record uid="{item}" pageLayoutView="{pageLayoutView}" />
+			</div>
+		</div>
+	</div>
+	<div class="t3-page-ce-dropzone-available t3slavleejs-page-ce-dropzone-available ui-droppable"></div>
+</html>

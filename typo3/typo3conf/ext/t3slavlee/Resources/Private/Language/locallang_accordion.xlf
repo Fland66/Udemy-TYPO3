@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-01-28T16:49:27Z" product-name="t3slavlee">
+		<header/>
+		<body>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="tt_content.pi_flexform.columns.sheet_general.items">
+				<source>Items</source>
+			</trans-unit>	
+		</body>
+	</file>
+</xliff>

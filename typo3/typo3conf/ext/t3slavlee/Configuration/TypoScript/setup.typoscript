@@ -120,6 +120,7 @@ page {
     #################################
 	includeCSSLibs {
 		bootstrap = EXT:t3slavlee/Resources/Public/Bootstrap/css/bootstrap.min.css
+		bxslider = EXT:t3slavlee/Resources/Public/BxSlider/jquery.bxslider.min.css
 	}
 	
 	includeCSS {
@@ -130,19 +131,24 @@ page {
 	includeJSFooterlibs {
 		jquery = EXT:t3slavlee/Resources/Public/jQuery/js/jquery-3.3.1.slim.min.js
 		popper = EXT:t3slavlee/Resources/Public/Popper/js/popper.min.js
-		bootstrap = EXT:t3slavlee/Resources/Public/Bootstrap/js/bootstrap.min.js	
+		bootstrap = EXT:t3slavlee/Resources/Public/Bootstrap/js/bootstrap.min.js
+		bxslider = EXT:t3slavlee/Resources/Public/BxSlider/jquery.bxslider.min.js
+	}
+	
+	includeJSFooter {
+		t3slavlee_init = EXT:t3slavlee/Resources/Public/JavaScript/t3slavlee_init.js 
 	}
 	
 	#Config
 	config {
-		baseURL = http://p571069.webspaceconfig.de/typo3/
-		doctype = html5
+		baseURL = {$plugin.tx_t3slavlee.page.config.baseURL}
+		doctype = {$plugin.tx_t3slavlee.page.config.doctype}
 		
 		#####################################
 		# DEBUG - START
 		#####################################
-		debug = 1
-		contentObjectExceptionHandler = 0
+		debug = {$plugin.tx_t3slavlee.page.debug.debug}
+		contentObjectExceptionHandler = {$plugin.tx_t3slavlee.page.debug.contentObjectExceptionHandler}
 		#####################################
 		# DEBUG - END
 		#####################################
@@ -150,10 +156,10 @@ page {
 		#####################################
 		# COMPRESSION - START
 		#####################################
-		compressCSS = 0
-		compressJS = 0
-		concatenateCss = 0
-		concatenateJs = 0
+		compressCSS = {$plugin.tx_t3slavlee.page.compressing.compressCSS}
+		compressJS = {$plugin.tx_t3slavlee.page.compressing.compressJS}
+		concatenateCss = {$plugin.tx_t3slavlee.page.compressing.concatenateCss}
+		concatenateJs = {$plugin.tx_t3slavlee.page.compressing.concatenateJs}
 		#####################################
 		# COMPRESSION - END
 		#####################################
@@ -161,9 +167,9 @@ page {
 		#####################################
 		# PAGETITLE - START
 		#####################################
-		pageTitleFirst = 1
-		pageTitleSeparator = -
-		pageTitleSeparator.noTrimWrap = | | |
+		pageTitleFirst = {$plugin.tx_t3slavlee.page.pagetitle.pageTitleFirst}
+		pageTitleSeparator = {$plugin.tx_t3slavlee.page.pagetitle.pageTitleSeparator}
+		pageTitleSeparator.noTrimWrap = {$plugin.tx_t3slavlee.page.pagetitle.pageTitleSeparator.noTrimWrap}
 		#####################################
 		# PAGETITLE - END
 		#####################################
@@ -171,9 +177,9 @@ page {
 		#####################################
 		# INDEXING / SEARCH - START
 		#####################################
-		index_enable = 1
-		index_externals = 1
-		index_metatags = 1
+		index_enable = {$plugin.tx_t3slavlee.page.indexing.index_enable}
+		index_externals = {$plugin.tx_t3slavlee.page.indexing.index_externals}
+		index_metatags = {$plugin.tx_t3slavlee.page.indexing.index_metatags}
 		#####################################
 		# INDEXING / SEARCH - END
 		#####################################
@@ -181,7 +187,7 @@ page {
 		#####################################
 		# CACHE - START
 		#####################################
-		sendCacheHeaders = 0
+		sendCacheHeaders = {$plugin.tx_t3slavlee.page.cache.sendCacheHeaders}
 		#####################################
 		# CACHE - END
 		#####################################
@@ -189,12 +195,12 @@ page {
 		#####################################
 		# LANGUAGE - START
 		#####################################
-		sys_language_uid = 0
-		sys_language_overlay = hideNonTranslated
-		sys_language_mode = strict
-		language = de
-		locale_all = de-DE
-		htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="de-DE"		
+		sys_language_uid = {$plugin.tx_t3slavlee.page.language.sys_language_uid}
+		sys_language_overlay = {$plugin.tx_t3slavlee.page.language.sys_language_overlay}
+		sys_language_mode = {$plugin.tx_t3slavlee.page.language.sys_language_mode}
+		language = {$plugin.tx_t3slavlee.page.language.language}
+		locale_all = {$plugin.tx_t3slavlee.page.language.locale_all}
+		htmlTag_setParams = {$plugin.tx_t3slavlee.page.language.htmlTag_setParams}
 		#####################################
 		# LANGUAGE - END
 		#####################################
@@ -202,11 +208,11 @@ page {
 	
 	#Meta
 	meta {
-		viewport = width=device-width, initial-scale=1, shrink-to-fit=no
+		viewport = {$plugin.tx_t3slavlee.page.meta.viewport}
 		
 		#Google
-		robots = noindex,nofollow
-		google = notranslate
+		robots = {$plugin.tx_t3slavlee.page.meta.robots}
+		google = {$plugin.tx_t3slavlee.page.meta.google}
 		
 		#SEO
 		description {
@@ -221,7 +227,7 @@ page {
 			field = keywords
 		}
 		
-		copyright = Kevin Chileong Lee
+		copyright = {$plugin.tx_t3slavlee.page.meta.copyright}
 		
 		#OpenGraph
 		og:title {
@@ -273,7 +279,7 @@ page {
       		}
       	}
       	
-      	X-UA-Compatible = IE=edge
+      	X-UA-Compatible = {$plugin.tx_t3slavlee.page.meta.X-UA-Compatible}
 	}
 	
 	#################################
@@ -281,7 +287,7 @@ page {
     #################################
 	10 = FLUIDTEMPLATE
 	10 {
-		templateName = Default
+		templateName = {$plugin.tx_t3slavlee.page.layout.templateName}
 		
 		#################################
         ## Template Paths
@@ -302,11 +308,11 @@ page {
         ## SETTINGS
         #################################
 		settings {
-			layoutHeaderStyle = Default
-			layoutFooterStyle = Default
+			layoutHeaderStyle = {$plugin.tx_t3slavlee.page.layout.header.style}			
+			layoutFooterStyle = {$plugin.tx_t3slavlee.page.layout.footer.style}
 		}
-
-        #################################
+		
+		#################################
         ## PROCESSORS
         #################################
         dataProcessing {
